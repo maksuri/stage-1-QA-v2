@@ -1,0 +1,12 @@
+
+*.class
+
+
+*.log
+
+
+*.jar
+
+/target
+/.idea
+src/test
