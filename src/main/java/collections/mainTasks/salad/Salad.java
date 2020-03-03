@@ -52,13 +52,13 @@ public class Salad {
     }
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("Salad:" + name + "{" + "\n");
+        String s;
+        s = "Salad:" + name + "{" + "\n";
         for( Vegetable vegetable : salad ){
-            sb.append(vegetable.toString() + "\n");
+            s = s +vegetable.toString() + "\n";
         }
-        sb.append("}");
-        return sb.toString();
+        s = s + "}";
+        return s;
 
     }
 }

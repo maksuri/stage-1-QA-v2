@@ -25,6 +25,4 @@ public class Tomato extends Vegetable {
         return super.toString().replace("{", "{sort:" + getSort().getName()+", ") ;
     }
 
-    public static class Cucumber {
-    }
 }
