@@ -11,51 +11,58 @@ public class Salad {
 
     private List<Vegetable> salad;
     String name;
-    public Salad(List<Vegetable> listVegetables,String name){
-        salad = new ArrayList<>(listVegetables) ;
+
+    public Salad(List<Vegetable> listVegetables, String name) {
+        salad = new ArrayList<>(listVegetables);
         this.name = name;
 
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    private List<Vegetable> copySalad(){
+
+    private List<Vegetable> copySalad() {
         return new ArrayList<>(salad);
     }
-    public double getCaloriesOfSalad(){
+
+    public double getCaloriesOfSalad() {
         double caloriesOfSalad = 0;
-        for(Vegetable vegetable: salad){
+        for (Vegetable vegetable : salad) {
             caloriesOfSalad += vegetable.getCalories();
         }
         return caloriesOfSalad;
     }
 
-    public List<Vegetable> sortByVegetableCalories(){
+    public List<Vegetable> sortByVegetableCalories() {
         List<Vegetable> copyOfSalad = copySalad();
         copyOfSalad.sort(new ComparatorByCalories());
         return copyOfSalad;
     }
-    public List<Vegetable> sortByVegetableWeight(){
+
+    public List<Vegetable> sortByVegetableWeight() {
         List<Vegetable> copyOfSalad = copySalad();
         copyOfSalad.sort(new ComparatorByWeight());
         return copyOfSalad;
     }
-    public List<Vegetable> getVegetablesByCaloriesDiapason(double minCalories, double maxCalories){
+
+    public List<Vegetable> getVegetablesByCaloriesDiapason(double minCalories, double maxCalories) {
         List<Vegetable> vegetablesByCaloriesDiapason = new ArrayList<>();
-        for(Vegetable vegetable: salad){
-            if(vegetable.getCalories()>= minCalories && vegetable.getCalories()<= maxCalories){
+        for (Vegetable vegetable : salad) {
+            if (vegetable.getCalories() >= minCalories && vegetable.getCalories() <= maxCalories) {
                 vegetablesByCaloriesDiapason.add(vegetable);
             }
         }
         return vegetablesByCaloriesDiapason;
 
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         String s;
         s = "Salad:" + name + "{" + "\n";
-        for( Vegetable vegetable : salad ){
-            s = s +vegetable.toString() + "\n";
+        for (Vegetable vegetable : salad) {
+            s = s + vegetable.toString() + "\n";
         }
         s = s + "}";
         return s;
