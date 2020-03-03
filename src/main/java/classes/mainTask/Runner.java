@@ -7,21 +7,21 @@ public class Runner {
         ArrayList<Car> carsTemp;
         cars = ArrayCarsCreator.create();
         System.out.println("All Cars:");
-        for( Car car0 : cars){
-            System.out.println(car0);
+        for( Car car : cars){
+            System.out.println(car);
         }
-        System.out.println("Cars with mark = " + Car.Mark.AUDI);
-        carsTemp = ActionCars.getCarsByMark(Car.Mark.AUDI,cars);
-        for( Car car0 : carsTemp){
-            System.out.println(car0);
+        System.out.println("Cars with mark = " + Mark.AUDI);
+        carsTemp = ActionCars.getCarsByMark(Mark.AUDI,cars);
+        for( Car car : carsTemp){
+            System.out.println(car);
         }
         String model ="SG10";
         int yearUsed = 4;
         System.out.println("Cars with model = " + model +
                 "; More than years used = " + yearUsed );
         carsTemp = ActionCars.getCarsByModelAndYearsUsed(model ,yearUsed, cars);
-        for( Car car0 : carsTemp){
-            System.out.println(car0);
+        for( Car car : carsTemp){
+            System.out.println(car);
         }
         int yearCreation = 2015;
         int price = 34000;
@@ -29,8 +29,8 @@ public class Runner {
                 "; Price higher than = " + price);
         carsTemp = ActionCars.getCarsByYearCreationAndHigherPrice
                 (yearCreation,price,cars);
-        for( Car car0 : carsTemp){
-            System.out.println(car0);
+        for( Car car : carsTemp){
+            System.out.println(car);
         }
     }
 }

@@ -10,21 +10,9 @@ package classes.mainTask;
 //b) список автомобилей заданной модели, которые эксплуатируются больше n лет;
 //c) список автомобилей заданного года выпуска, цена которых больше указанной.
 
+
 public class Car {
-    public enum Mark{
-        AUDI,
-        FIAT,
-        MERCEDES,
-        HONDA,
-        SEAT;
-    }
-    public enum Color{
-        BLACK,
-        BLUE,
-        BRONZE,
-        GREEN,
-        YELLOW;
-    }
+
     private static int maxId = 0;
     private int id;
     private Mark mark ;
@@ -36,7 +24,7 @@ public class Car {
     public Car(){
         maxId++;
         id = maxId;
-    };
+    }
     public Car(Mark mark,String model,int yearCreation,Color color,
                int price,String regNumber){
         maxId++;

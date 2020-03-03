@@ -13,9 +13,9 @@ import java.util.Calendar;
 //c) список автомобилей заданного года выпуска, цена которых больше указанной.
 public class ActionCars {
 
-    public static ArrayList<Car> getCarsByMark(Car.Mark mark,ArrayList<Car> cars){
+    public static ArrayList<Car> getCarsByMark(Mark mark,ArrayList<Car> cars){
 
-        ArrayList<Car> carsMark = new ArrayList<Car>();
+        ArrayList<Car> carsMark = new ArrayList<>();
 
         for (Car car0 : cars) {
             if(car0.getMark().equals(mark)){
@@ -30,7 +30,7 @@ public class ActionCars {
                                                             int yearsUsed,
                                                             ArrayList<Car> cars){
 
-        ArrayList<Car> carsByModelAndYearsUsed = new ArrayList<Car>();
+        ArrayList<Car> carsByModelAndYearsUsed = new ArrayList<>();
         int currYear = Calendar.getInstance().get(Calendar.YEAR);
         int minYearCreation = currYear - yearsUsed - 1;
         for (Car car0 : cars) {
@@ -44,7 +44,7 @@ public class ActionCars {
     public static ArrayList<Car> getCarsByYearCreationAndHigherPrice
             (int yearCreation ,int price , ArrayList<Car> cars){
 
-        ArrayList<Car> carsByYearCreationAndHigherPrice = new ArrayList<Car>();
+        ArrayList<Car> carsByYearCreationAndHigherPrice = new ArrayList<>();
         for(Car car0 : cars){
             if(car0.getYearCreation() == yearCreation &&
                car0.getPrice()>= price ) {
