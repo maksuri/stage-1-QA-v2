@@ -35,7 +35,7 @@ public class Car {
         this.color = color;
         this.price = price;
         this.regNumber = regNumber;
-    };
+    }
 
     public void setMark(Mark mark){
         this.mark = mark;
@@ -91,9 +91,9 @@ public class Car {
     }
 
     public String toString() {
-        return "ID:" + id + ";" + "Mark:" + mark + ";" +
+        return "Car"+"{"+"ID:" + id + ";" + "Mark:" + mark + ";" +
                 "Model:" + model + ";" + "Color:" + color + ";" +
                 "Price:" + price + ";" + "Year creation:" + yearCreation + ";" +
-                "Registration number:" + regNumber + ";";
+                "Registration number:" + regNumber + ";"+"}";
     }
 }

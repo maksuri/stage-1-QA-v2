@@ -5,5 +5,5 @@ public enum Mark {
     FIAT,
     MERCEDES,
     HONDA,
-    SEAT;
+    SEAT
 }
